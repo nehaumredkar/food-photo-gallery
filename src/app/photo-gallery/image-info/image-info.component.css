@@ -1,0 +1,10 @@
+.img-block img {
+    width: 440px;
+    height: 440px;
+}
+
+.image-detail{
+        border: 2px solid #bdf5e0;
+        margin: 30px auto;
+        padding: 19px;
+}

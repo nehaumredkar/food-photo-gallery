@@ -1,0 +1,168 @@
+<div class="container image-detail">
+    <h1 class='text-center p-3'>Image Detail</h1>
+    <div class="row">
+        <div class="col-sm-5 img-block">
+            <img [src]='imageUrl' alt="Card image">
+        </div>
+        <div class="col-sm-3 img-info" >
+                <label><strong>Name: </strong> {{imageInfo.title._content}}</label><br/><br/>
+                <label><strong>Description: </strong> {{imageInfo.description._content}}</label>
+        </div>
+        <div class="col-sm-4 feedback">
+            <h1>Feedback form</h1>
+
+            <form [formGroup]="feedbackForm" (ngSubmit)="submitFeedback()">
+                <div class="form-group">
+                    <label for="">Rating: </label>                    
+                        <span [ngSwitch]="currentRate">
+                            <span *ngSwitchCase="1">
+                                <i class="fa fa-star" data-jest="empty star" (click)="getRating(1)"></i>
+                                <i class="fa fa-star-o" data-jest="empty star" (click)="getRating(2)"></i>
+                                <i class="fa fa-star-o" data-jest="empty star" (click)="getRating(3)"></i>
+                                <i class="fa fa-star-o" data-jest="empty star" (click)="getRating(4)"></i>
+                                <i class="fa fa-star-o" data-jest="empty star" (click)="getRating(5)"></i>
+                                <i class="fa fa-star-o" data-jest="empty star" (click)="getRating(6)"></i>
+                                <i class="fa fa-star-o" data-jest="empty star" (click)="getRating(7)"></i>
+                                <i class="fa fa-star-o" data-jest="empty star" (click)="getRating(8)"></i>
+                                <i class="fa fa-star-o" data-jest="empty star" (click)="getRating(9)"></i>
+                                <i class="fa fa-star-o" data-jest="empty star" (click)="getRating(10)"></i>
+                            </span>
+                            <span *ngSwitchCase="2">
+                                <i class="fa fa-star" data-jest="empty star" (click)="getRating(1)"></i>
+                                <i class="fa fa-star" data-jest="empty star" (click)="getRating(2)"></i>
+                                <i class="fa fa-star-o" data-jest="empty star" (click)="getRating(3)"></i>
+                                <i class="fa fa-star-o" data-jest="empty star" (click)="getRating(4)"></i>
+                                <i class="fa fa-star-o" data-jest="empty star" (click)="getRating(5)"></i>
+                                <i class="fa fa-star-o" data-jest="empty star" (click)="getRating(6)"></i>
+                                <i class="fa fa-star-o" data-jest="empty star" (click)="getRating(7)"></i>
+                                <i class="fa fa-star-o" data-jest="empty star" (click)="getRating(8)"></i>
+                                <i class="fa fa-star-o" data-jest="empty star" (click)="getRating(9)"></i>
+                                <i class="fa fa-star-o" data-jest="empty star" (click)="getRating(10)"></i>
+                            </span>
+                            <span *ngSwitchCase="3">
+                                <i class="fa fa-star" data-jest="empty star" (click)="getRating(1)"></i>
+                                <i class="fa fa-star" data-jest="empty star" (click)="getRating(2)"></i>
+                                <i class="fa fa-star" data-jest="empty star" (click)="getRating(3)"></i>
+                                <i class="fa fa-star-o" data-jest="empty star" (click)="getRating(4)"></i>
+                                <i class="fa fa-star-o" data-jest="empty star" (click)="getRating(5)"></i>
+                                <i class="fa fa-star-o" data-jest="empty star" (click)="getRating(6)"></i>
+                                <i class="fa fa-star-o" data-jest="empty star" (click)="getRating(7)"></i>
+                                <i class="fa fa-star-o" data-jest="empty star" (click)="getRating(8)"></i>
+                                <i class="fa fa-star-o" data-jest="empty star" (click)="getRating(9)"></i>
+                                <i class="fa fa-star-o" data-jest="empty star" (click)="getRating(10)"></i>
+                            </span>
+                            <span *ngSwitchCase="4">
+                                <i class="fa fa-star" data-jest="empty star" (click)="getRating(1)"></i>
+                                <i class="fa fa-star" data-jest="empty star" (click)="getRating(2)"></i>
+                                <i class="fa fa-star" data-jest="empty star" (click)="getRating(3)"></i>
+                                <i class="fa fa-star" data-jest="empty star" (click)="getRating(4)"></i>
+                                <i class="fa fa-star-o" data-jest="empty star" (click)="getRating(5)"></i>
+                                <i class="fa fa-star-o" data-jest="empty star" (click)="getRating(6)"></i>
+                                <i class="fa fa-star-o" data-jest="empty star" (click)="getRating(7)"></i>
+                                <i class="fa fa-star-o" data-jest="empty star" (click)="getRating(8)"></i>
+                                <i class="fa fa-star-o" data-jest="empty star" (click)="getRating(9)"></i>
+                                <i class="fa fa-star-o" data-jest="empty star" (click)="getRating(10)"></i>
+                            </span>
+                            <span *ngSwitchCase="5">
+                                <i class="fa fa-star" data-jest="empty star" (click)="getRating(1)"></i>
+                                <i class="fa fa-star" data-jest="empty star" (click)="getRating(2)"></i>
+                                <i class="fa fa-star" data-jest="empty star" (click)="getRating(3)"></i>
+                                <i class="fa fa-star" data-jest="empty star" (click)="getRating(4)"></i>
+                                <i class="fa fa-star" data-jest="empty star" (click)="getRating(5)"></i>
+                                <i class="fa fa-star-o" data-jest="empty star" (click)="getRating(6)"></i>
+                                <i class="fa fa-star-o" data-jest="empty star" (click)="getRating(7)"></i>
+                                <i class="fa fa-star-o" data-jest="empty star" (click)="getRating(8)"></i>
+                                <i class="fa fa-star-o" data-jest="empty star" (click)="getRating(9)"></i>
+                                <i class="fa fa-star-o" data-jest="empty star" (click)="getRating(10)"></i>
+                            </span>
+                            <span *ngSwitchCase="6">
+                                <i class="fa fa-star" data-jest="empty star" (click)="getRating(1)"></i>
+                                <i class="fa fa-star" data-jest="empty star" (click)="getRating(2)"></i>
+                                <i class="fa fa-star" data-jest="empty star" (click)="getRating(3)"></i>
+                                <i class="fa fa-star" data-jest="empty star" (click)="getRating(4)"></i>
+                                <i class="fa fa-star" data-jest="empty star" (click)="getRating(5)"></i>
+                                <i class="fa fa-star" data-jest="empty star" (click)="getRating(6)"></i>
+                                <i class="fa fa-star-o" data-jest="empty star" (click)="getRating(7)"></i>
+                                <i class="fa fa-star-o" data-jest="empty star" (click)="getRating(8)"></i>
+                                <i class="fa fa-star-o" data-jest="empty star" (click)="getRating(9)"></i>
+                                <i class="fa fa-star-o" data-jest="empty star" (click)="getRating(10)"></i>
+                            </span>
+                            <span *ngSwitchCase="7">
+                                <i class="fa fa-star" data-jest="empty star" (click)="getRating(1)"></i>
+                                <i class="fa fa-star" data-jest="empty star" (click)="getRating(2)"></i>
+                                <i class="fa fa-star" data-jest="empty star" (click)="getRating(3)"></i>
+                                <i class="fa fa-star" data-jest="empty star" (click)="getRating(4)"></i>
+                                <i class="fa fa-star" data-jest="empty star" (click)="getRating(5)"></i>
+                                <i class="fa fa-star" data-jest="empty star" (click)="getRating(6)"></i>
+                                <i class="fa fa-star" data-jest="empty star" (click)="getRating(7)"></i>
+                                <i class="fa fa-star-o" data-jest="empty star" (click)="getRating(8)"></i>
+                                <i class="fa fa-star-o" data-jest="empty star" (click)="getRating(9)"></i>
+                                <i class="fa fa-star-o" data-jest="empty star" (click)="getRating(10)"></i>
+                            </span>
+                            <span *ngSwitchCase="8">
+                                <i class="fa fa-star" data-jest="empty star" (click)="getRating(1)"></i>
+                                <i class="fa fa-star" data-jest="empty star" (click)="getRating(2)"></i>
+                                <i class="fa fa-star" data-jest="empty star" (click)="getRating(3)"></i>
+                                <i class="fa fa-star" data-jest="empty star" (click)="getRating(4)"></i>
+                                <i class="fa fa-star" data-jest="empty star" (click)="getRating(5)"></i>
+                                <i class="fa fa-star" data-jest="empty star" (click)="getRating(6)"></i>
+                                <i class="fa fa-star" data-jest="empty star" (click)="getRating(7)"></i>
+                                <i class="fa fa-star" data-jest="empty star" (click)="getRating(8)"></i>
+                                <i class="fa fa-star-o" data-jest="empty star" (click)="getRating(9)"></i>
+                                <i class="fa fa-star-o" data-jest="empty star" (click)="getRating(10)"></i>
+                            </span>
+                            <span *ngSwitchCase="9">
+                                <i class="fa fa-star" data-jest="empty star" (click)="getRating(1)"></i>
+                                <i class="fa fa-star" data-jest="empty star" (click)="getRating(2)"></i>
+                                <i class="fa fa-star" data-jest="empty star" (click)="getRating(3)"></i>
+                                <i class="fa fa-star" data-jest="empty star" (click)="getRating(4)"></i>
+                                <i class="fa fa-star" data-jest="empty star" (click)="getRating(5)"></i>
+                                <i class="fa fa-star" data-jest="empty star" (click)="getRating(6)"></i>
+                                <i class="fa fa-star" data-jest="empty star" (click)="getRating(7)"></i>
+                                <i class="fa fa-star" data-jest="empty star" (click)="getRating(8)"></i>
+                                <i class="fa fa-star" data-jest="empty star" (click)="getRating(9)"></i>
+                                <i class="fa fa-star-o" data-jest="empty star" (click)="getRating(10)"></i>
+                            </span>
+                            <span *ngSwitchCase="10">
+                                <i class="fa fa-star" data-jest="empty star" (click)="getRating(1)"></i>
+                                <i class="fa fa-star" data-jest="empty star" (click)="getRating(2)"></i>
+                                <i class="fa fa-star" data-jest="empty star" (click)="getRating(3)"></i>
+                                <i class="fa fa-star" data-jest="empty star" (click)="getRating(4)"></i>
+                                <i class="fa fa-star" data-jest="empty star" (click)="getRating(5)"></i>
+                                <i class="fa fa-star" data-jest="empty star" (click)="getRating(6)"></i>
+                                <i class="fa fa-star" data-jest="empty star" (click)="getRating(7)"></i>
+                                <i class="fa fa-star" data-jest="empty star" (click)="getRating(8)"></i>
+                                <i class="fa fa-star" data-jest="empty star" (click)="getRating(9)"></i>
+                                <i class="fa fa-star" data-jest="empty star" (click)="getRating(10)"></i>
+                            </span>
+                            <span *ngSwitchDefault>
+                                <i class="fa fa-star-o" data-jest="empty star" (click)="getRating(1)"></i>
+                                <i class="fa fa-star-o" data-jest="empty star" (click)="getRating(2)"></i>
+                                <i class="fa fa-star-o" data-jest="empty star" (click)="getRating(3)"></i>
+                                <i class="fa fa-star-o" data-jest="empty star" (click)="getRating(4)"></i>
+                                <i class="fa fa-star-o" data-jest="empty star" (click)="getRating(5)"></i>
+                                <i class="fa fa-star-o" data-jest="empty star" (click)="getRating(6)"></i>
+                                <i class="fa fa-star-o" data-jest="empty star" (click)="getRating(7)"></i>
+                                <i class="fa fa-star-o" data-jest="empty star" (click)="getRating(8)"></i>
+                                <i class="fa fa-star-o" data-jest="empty star" (click)="getRating(9)"></i>
+                                <i class="fa fa-star-o" data-jest="empty star" (click)="getRating(10)"></i>
+                            </span>
+                            </span>
+                </div>
+                <div class="form-group">
+                    <input class="form-control"  type="hidden" formControlName="photo_id">
+                    <label for="">Rating provided by: </label>
+                    <input class="form-control" formControlName="provider" type="text" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="">Reason for the rating: </label>
+                    <textarea class="form-control" formControlName="reason" rows="5" cols="69"></textarea>
+                </div>
+                <button class="btn btn-success" type="submit" [disabled]="!feedbackForm.valid" value="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    
+</div>
+
